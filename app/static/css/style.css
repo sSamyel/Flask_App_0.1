@@ -1,0 +1,73 @@
+form{
+background-color: #555555;
+
+}
+
+input{
+    border: none;
+    color: white;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #555555;
+	border-radius: 12px;
+	border: 2px solid #ffffff;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+input {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+input:hover {
+    background-color: #ffffff; 
+    color: #555555;
+}
+
+input:focus{
+outline: none;
+}
+
+p{
+margin-top: 300px;
+text-align: center;
+}
+
+p span{
+	font-size: 40px;
+	color: #555555;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    left: 0;
+    position: absolute;
+    top: 450px;
+    width: 100%;
+}
+
+#LK{
+     position:absolute;
+     left: 95%;
+
+}
+
+#LK2{
+     position:absolute;
+     left: 95%;
+
+}
+
+form span{
+	font-size: 40px;
+	color: #ffffff;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	margin-left: 10px;
+}
+
+#name{
+margin-top: 100px;
+}

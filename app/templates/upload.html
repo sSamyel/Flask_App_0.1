@@ -1,0 +1,19 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Загрузка файла</title>
+    </head>
+    <body>
+    <h1>Форма</h1>
+	<form method="post" novalidate enctype="multipart/form-data">
+	{{ form.hidden_tag() }}
+	<p>{{ form.file_object }} {{ form.file_object.label }}</p>
+	    {% for error in form.file_object.errors %}
+		<div class="alert alert-danger" role="alert">
+		{{ error }}
+		{% endfor %}
+	<p>{{ form.submit() }}</p>
+	</form>
+    </body>
+    </html>

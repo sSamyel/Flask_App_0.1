@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style1.css") }}'>
+    </head>
+    <body>
+	<form id="Top">
+		<input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
+	</form>
+<h1 id="Center3">Регистрация</h1>
+    <form id="Center2" action="" method="post" novalidate>
+	{{form.hidden_tag() }}
+	<p>
+		<div class="label">
+	{{form.login.label}}
+	    </div>
+		<div class="input">
+	{{form.login}}<br>
+		</div>
+	{% for error in form.login.errors %}
+	<center><div class="alert alert-danger" role="alert" align="center">
+	{{ error }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+			<div class="label">
+	{{form.fullname.label}}
+	    </div>
+		<div class="input">
+	{{form.fullname}}<br>
+		</div>
+	{% for error in form.fullname.errors %}
+		<center><div class="alert alert-danger" role="alert" >
+	{{ error }}
+		</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{form.email.label}}
+	    </div>
+		<div class="input">
+	{{form.email}}<br>
+		</div>
+	{% for error in form.email.errors %}
+	<center><div class="alert alert-danger" role="alert">
+	{{ error }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{form.username.label}}
+	    </div>
+		<div class="input">
+	{{form.username}}<br>
+		</div>
+	{% for error in form.username.errors %}
+	<center><div class="alert alert-danger" role="alert">
+	{{ error }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{ form.password.label }}
+	    </div>
+		<div class="input">
+	{{ form.password }}
+		</div><br>
+	{% for error in form.password.errors %}
+	<center><div class="alert alert-danger" role="alert">
+	{{ error }}
+	</div></center>
+	{% endfor %}
+	<div class="button">{{ form.submit() }}</div></p>
+	</form>
+{% endblock %}

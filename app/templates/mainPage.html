@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style.css") }}'>
+    </head>
+    <body>
+<form>
+    {% if  username != "" %}
+             <form>
+                 <span>{{username}}</span>
+                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+    {% else %}
+             <form>
+             <input value="Войти" type="button" onclick="location.href='{{ url_for('login') }}'" />
+             <input value="Регистрация" type="button" onclick="location.href='{{ url_for('registration') }}'" />
+                 <input id="LK" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             </form>
+    {% endif %}
+</form>
+<p><img id="MainPicture" src='{{ url_for("static", filename="Computer.png") }}' alt="Монитор">
+    <span id="private">{{commentary}}</span>
+    <br>
+    {% if login != "" %}
+    <span id="name">{{login}}</span>
+    {% endif %}
+</p>
+{% endblock %}

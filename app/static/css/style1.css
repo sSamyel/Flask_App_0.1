@@ -1,0 +1,90 @@
+#Top{
+background-color: #555555;
+}
+
+#Center1{
+text-align: center;
+margin-top: 200px;
+}
+
+#Center3{
+text-align: center;
+margin-top: 150px;
+}
+
+#Center2{
+text-align: center;
+margin-top: 15px;
+}
+
+.label{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#LK{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #555555;
+	border-radius: 12px;
+	border: 2px solid #ffffff;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#LK {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+#LK:hover {
+    background-color: #ffffff; 
+    color: #555555;
+}
+
+input{
+    border: none;
+    color: #555555;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #ffffff;
+	border-radius: 12px;
+	border: 2px solid #555555;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+input {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+input:hover {
+    background-color: #ffffff; 
+    color: #555555;
+}
+
+input:focus{
+outline: none;
+}
+
+#name{
+top: 470px;
+}
+
+.alert{
+width: 15%;
+text-align: center;
+}

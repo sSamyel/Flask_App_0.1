@@ -1,0 +1,89 @@
+{% extends "index.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+<link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style3.css") }}'>
+    </head>
+    <body>
+    <div id="black">
+		<input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+	</div>
+	<h1 id="title">Настройки</h1>
+	<div id="Center3">
+	<form id="Center2" action="" method="post" novalidate enctype="multipart/form-data">
+	<div id="box">
+		{{form.hidden_tag() }}
+	<h3 id="redact2">Изменить стартовый комментарий</h3>
+
+		<div class="input">
+	{{form.commentary(size=35)}}<br>
+		</div>
+		{% for error in form.commentary.errors %}
+	<center><div class="alert alert-danger" role="alert" align="center">
+	Слишком большое сообщение!
+	</div></center>
+	{% endfor %}
+	</p>
+
+	<h3 id="redact">Изменить данные пользователя</h3>
+	<br>
+	<p>
+		<div class="label">
+	{{form.login.label}}
+	    </div>
+		<div class="input">
+	{{form.login}}<br>
+		</div>
+	</p>
+	<p>
+			<div class="label">
+	{{form.fullname.label}}
+	    </div>
+		<div class="input">
+	{{form.fullname}}<br>
+		</div>
+	</p>
+	<p>
+		<div class="label">
+	{{form.email.label}}
+	    </div>
+		<div class="input">
+	{{form.email}}<br>
+		</div>
+		{% for error in form.email.errors %}
+	<center><div class="alert alert-danger" role="alert" align="center">
+	{{ error }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{form.username.label}}
+	    </div>
+		<div class="input">
+	{{form.username}}<br>
+		</div>
+		{% for error in form.username.errors %}
+	<center><div class="alert alert-danger" role="alert" align="center">
+	{{ error }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{ form.password.label }}
+	    </div>
+		<div class="input">
+	{{ form.password }}
+		</div>
+	<h3 id="upload">Изменить картинку профиля</h3>
+		<br>
+		{{ form.file_object }}
+        <br>
+		<br>
+		</div>
+		<br>
+		{{ form.submit() }}</div></p>
+	</form></div>
+
+{% endblock %}
