@@ -1,23 +1,31 @@
 {% extends "index.html" %}
 
-{% block content %}
+{% block content1 %}
 <link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
 <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style2.css") }}'>
-    </head>
-    <body>
+{% endblock %}
+{% block content2 %}
 	<div id="black">
-		<input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
-		<input id="LK1" value="Выйти из АК" type="button" onclick="location.href='{{ url_for('logout') }}'" />
+		<input id="LK" value="BrightF" type="button" onclick="location.href='{{ url_for('main') }}'" />
+		<input id="LK1" value="Выйти" type="button" onclick="location.href='{{ url_for('logout') }}'" />
+		<input id="LK3" value="Редактировать" type="button" onclick="location.href='{{ url_for('setting') }}'" />
+		<input id="LK4" value="Фотогалерея" type="button" onclick="location.href='{{ url_for('gallery') }}'" />
 	</div>
-	<h1 id="title">Профиль</h1>
-	<br>
-	<p><img src='{{ url_for("static", filename=fname ) }}' alt="Профиль" height="180" width="180" align="center"></p>
-	<h3>
-	<div class="label">Логин</div><div class="name">{{name}}</div>
-	<div class="label">Имя</div><div class="name">{{login}}</div>
-	<div class="label">Фамилия</div><div class="name">{{fullname}}</div>
-	<div class="label">Email</div><div class="name">{{email}}</div>
-	</h3>
-	<center><input id="LK3" value="Редактировать" type="button" onclick="location.href='{{ url_for('setting') }}'" /></center>
-
+    <div id="menu1">
+	<div id="prof">
+	<img id="icon" src='{{ url_for("static", filename=fname ) }}' alt="Профиль" height="180" width="180" align="center">
+   <div id="prof2">
+		<div id="nameI" class="name1">{{name}}</div>
+		<div class="name1">{{email}}</div>
+	</div>
+   </div>
+	</div>
+   <div id="menu2">
+	<div id="block2">
+	   <h3>
+		<div class="block"><div class="label">Имя</div><div class="name">{{login}}</div></div>
+		   <div class="block"><div class="label">Фамилия</div><div class="name">{{fullname}}</div></div>
+	   </h3>
+		</div>
+    </div>
 {% endblock %}

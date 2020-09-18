@@ -1,0 +1,316 @@
+#black{
+	background-color: #1d1d1d;
+	height:40px;
+	}
+
+#title{
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+margin-top: 100px;
+font-size: 50px;
+}
+
+.name{
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+font-size: 20px;
+}
+
+.label{
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+font-size: 30px;
+}
+
+p{
+text-align: center;
+}
+
+#redact{
+margin-top: 50px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+font-size: 25px;
+}
+
+#redact2{
+margin-top: 50px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+font-size: 25px;
+}
+
+#upload{
+margin-top: 50px;
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+font-size: 25px;
+}
+
+input{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #555555;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #ffffff;
+	border-radius: 12px;
+	border: 2px solid #555555;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+input {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+input:hover {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+input:focus{
+outline: none;
+}
+
+#LK{
+    border: none;
+    color: white;
+    padding: 11px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 0px;
+	background-color: rgba(0,0,0,0);
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#LK {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#LK:hover {
+    background-color: #ffffff;
+    color: #1d1d1d;
+}
+
+#LK1{
+	position:absolute;
+    left: 93%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+	background-color: #555555;
+	border-radius: 12px;
+	border: 2px solid #ffffff;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+#LK1 {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#LK1:hover {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+#Center2{
+text-align: center;
+}
+
+.alert{
+width: 30%;
+text-align: center;
+}
+
+hr {
+display: block;
+content: "";
+height: 30px;
+margin-top: -31px;
+border-style: solid;
+border-color: black;
+border-width: 0 0 1px 0;
+border-radius: 20px;
+}
+
+#top {
+border-style: solid;
+border-color: black;
+border-width: 1px 0 0 0;
+border-radius: 20px;
+margin-top:10px;
+}
+
+#Center3 {
+	position: absolute;
+	left: 30%;
+	right:30%;
+}
+
+#box {
+	border-radius: 12px;
+	border: 4px solid #555555;
+}
+
+#EditorPicture {
+max-width: 100%;
+min-width: 100%;
+opacity:0.3;
+min-height: 100%;
+max-height: 100%;
+}
+
+#mask {
+background-color: black;
+}
+
+form {
+position: absolute;
+top: 30%;
+left: 35%;
+right: 35%;
+width: 30%;
+}
+
+.example-1 {
+position: relative;
+}
+.example-1 .form-group{padding:1em;margin:1em}
+.example-1 input[type=file]{outline:0;opacity:0;pointer-events:none;user-select:none}
+.example-1 .label{ position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height:220px;width:220px;border:2px dashed grey;border-radius:5px;display:block;padding:1.2em;transition:border 300ms ease;cursor:pointer;text-align:center}
+.example-1 .label i{display:block;font-size:42px;padding-bottom:16px}
+.example-1 .label i,.example-1 .label .title{color:grey;transition:200ms color}
+.example-1 .label:hover{border:2px solid #fff}
+.example-1 .label:hover i,.example-1 .label:hover .title{color:#fff}
+
+#but {
+margin-top: 120px;
+}
+
+#ddd {
+width: 40%;
+margin-left: 0px;
+background-color: #1729B0;
+border: 0px;
+color: white;
+font-size: 15px;
+}
+
+#ddd:hover {
+background-color: #081472;
+}
+
+#windowPic{
+position: fixed;
+top: 10%;
+left: 32%;
+right: 32%;
+width: 36%;
+height: 710px;
+background-color: rgba(1,1,1,0.7);
+display: block;
+z-index: 150;
+border-radius: 12px;
+}
+
+#Picture {
+width: 80%;
+height: 80%;
+margin-top: 10%;
+margin-left: 10%;
+border-radius: 3px;
+}
+
+#close2 {
+position: absolute;
+top: 3%;
+right: 3%;
+cursor: pointer;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+a {
+text-decoration: none;
+color: white;
+font-size: 14px;
+}
+
+a:hover {
+text-decoration: none;
+color: white;
+}
+
+#dow1 {
+position: absolute;
+width: 30%;
+right: 35%;
+left: 35%;
+bottom: 2%;
+}
+
+#dow1:hover {
+width: 30%;
+right: 35%;
+left: 35%;
+}
+
+#imageDow{
+width: 100%;
+height: 100%;
+}
+
+#textDow{
+color: white;
+margin-top: 20px;
+font-size: 30px;
+margin-left: -20px;
+}
+
+#downl{
+position: absolute;
+left: 48%;
+right: 48%;
+width: 4%;
+height: 8%;
+top: 26%;
+bottom: 66%;
+}

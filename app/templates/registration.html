@@ -1,13 +1,14 @@
 {% extends "index.html" %}
 
-{% block content %}
+{% block content1 %}
 <link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
 <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style1.css") }}'>
-    </head>
-    <body>
+{% endblock %}
+{% block content2 %}
 	<form id="Top">
 		<input id="LK" value="Назад" type="button" onclick="location.href='{{ url_for('main') }}'" />
 	</form>
+<div class="window">
 <h1 id="Center3">Регистрация</h1>
     <form id="Center2" action="" method="post" novalidate>
 	{{form.hidden_tag() }}
@@ -77,4 +78,5 @@
 	{% endfor %}
 	<div class="button">{{ form.submit() }}</div></p>
 	</form>
+	</div>
 {% endblock %}

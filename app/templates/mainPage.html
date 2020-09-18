@@ -1,29 +1,209 @@
 {% extends "index.html" %}
 
-{% block content %}
+{% block content1 %}
 <link rel="stylesheet" type="text/css" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
 <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="css/style.css") }}'>
-    </head>
-    <body>
+<script>
+    window.onload = function(){
+    if(document.getElementById('error').length != 0 ? true : false){
+    document.getElementById('window1').style.display = 'block';
+    }
+    if(document.getElementById('error2').length != 0 ? true : false){
+    document.getElementById('window2').style.display = 'block';
+    }
+    };
+
+
+
+    function show(state, windows){
+    document.getElementById(windows).style.display = state;
+    document.getElementById('gray').style.display = state;
+    }
+
+	window.addEventListener('scroll',(event) => {
+	var elem = document.getElementById('divBottom');
+	var y = scrollY;
+	if (y>3600) {
+	 elem.style.display = "block";
+	 elem.style.transition = "5s";
+	 elem.style.opacity = 1;
+	 }
+	else {
+	elem.style.display = "none";
+	}
+	});
+
+</script>
+{% endblock %}
+{% block content2 %}
+<div id="gray"></div>
+<div id="window1">
+    <form class="Center2" action="" method="post" novalidate>
+	<img id="close" src='{{ url_for("static", filename="close.png") }}' onclick="show('none','window1', 'close');" alt="Закрыть">
+		<center><h1 id="Center1">Авторизация</h1></center>
+        {{form.hidden_tag() }}
+	<p>
+        <center><div class="label">
+	{{form.username.label}}
+	    </div></center>
+		<center><div class="input">
+	{{form.username}}<br>
+		</div></center>
+
+	</p>
+	<p>
+		<center><div class="label">
+	{{ form.password.label }}
+	    </div></center>
+		<center><div class="input">
+	{{ form.password }}
+		</div></center><br>
+
+
+		<p><center><div class="label">{{ form.remember_me.label }} {{ form.remember_me() }}</div></center></p>
+		<center><div class="button">{{ form.submit() }}</div></center></p>
+	</form>
+</div>
+<div id="window2">
+    <center><form class="Center2" action="" method="post" novalidate>
+		<img id="close2" src='{{ url_for("static", filename="close.png") }}' onclick="show('none','window2');" alt="Закрыть">
+	<h1 id="Center3">Регистрация</h1>
+		{{form2.hidden_tag() }}
+	<p>
+		<div class="label">
+	{{form2.login.label}}
+	    </div>
+		<div class="input">
+	{{form2.login}}<br>
+		</div>
+	{% for error2 in form2.login.errors %}
+	<center><div class="alert alert-danger" role="alert" align="center">
+	{{ error2 }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+			<div class="label">
+	{{form2.fullname.label}}
+	    </div>
+		<div class="input">
+	{{form2.fullname}}<br>
+		</div>
+	{% for error2 in form2.fullname.errors %}
+		<center><div class="alert alert-danger" role="alert" >
+	{{ error2 }}
+		</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{form2.email.label}}
+	    </div>
+		<div class="input">
+	{{form2.email}}<br>
+		</div>
+	{% for error2 in form2.email.errors %}
+	<center><div class="alert alert-danger" role="alert">
+	{{ error2 }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{form2.username.label}}
+	    </div>
+		<div class="input">
+	{{form2.username}}<br>
+		</div>
+	{% for error2 in form2.username.errors %}
+	<center><div class="alert alert-danger" role="alert">
+	{{ error2 }}
+	</div></center>
+	{% endfor %}
+	</p>
+	<p>
+		<div class="label">
+	{{ form2.password.label }}
+	    </div>
+		<div class="input">
+	{{ form2.password }}
+		</div><br>
+	{% for error2 in form2.password.errors %}
+	<center><div id="error2" class="alert alert-danger" role="alert">
+	{{ error2 }}
+	</div></center>
+	{% endfor %}
+	<div class="button">{{ form2.submit() }}</div></p>
+	</form></center>
+	</div>
+<div id="top"><img id="MainPicture" src='{{ url_for("static", filename="main.jpg") }}' alt="Главная страница"></div><br>
+	<div id="block3">
+<img id="DescriptionPicture" src='{{ url_for("static", filename="description.png") }}' alt="Описание">
+    <span id="ras1">Описание</span><br><br><br>
+    <span id="descriptionRas1">BrightF - это современный фоторедактор использующий передовые технологии «глубинного обучения» для раскрашивания чёрно-белых фотографий.<br><br>
+           BrightF – это возможность представить, как на самом деле выглядят объекты, пейзажи, лица и события, знакомые нам только по черно-белым снимкам.<br><br>
+           BrightF – позволяет упростить стандартную процедуру раскрашивания изображений, в несколько раз.</span><br><br>
+		</div>
+	<div id="block2"><br><span id="ras2">Возможности</span><br><br><br><br>
+<p>
+	 <img id="im1" class="left" name = 'img1' src = '{{ url_for("static", filename="1.jpg") }}' height=400 width=400/>
+	 <img id="im11" class="center" name = 'img2' src = '{{ url_for("static", filename="1-1.jpg") }}' height=400 width=400/>
+     </p>
+	 <div class="space">
+	 </div>
+	 <p>
+	 <img id="im2" class="left" name = 'img4' src = '{{ url_for("static", filename="2.jpg") }}' height=400 width=400 />
+	 <img id="im22" class="center" name = 'img5' src = '{{ url_for("static", filename="2-2.jpg") }}' height=400 width=400 />
+     </p>
+	 <div class="space">
+	 </div>
+	 <p>
+	 <img id="im3" class="left" name = 'img7' src = '{{ url_for("static", filename="3.jpg") }}' height=400 width=400 />
+	 <img id="im33" class="center" name = 'img8' src = '{{ url_for("static", filename="3-3.jpg") }}' height=400 width=400 />
+     </p>
+	 <div class="space">
+	 </div>
+	 <p>
+	 <img id="im4" class="left" name = 'img10' src = '{{ url_for("static", filename="4.jpg") }}' height=400 width=400 />
+	 <img id="im44" class="center" name = 'img11' src = '{{ url_for("static", filename="4-4.jpg") }}' height=400 width=400 />
+     </p>
+	 <div class="space">
+	 </div>
+</div><br><br>
+<div id="bottom"></div>
+<img id="BottomPicture" src='{{ url_for("static", filename="bottom2.jpg") }}' alt="Низ страницы"><br>
+
+<div id="divBottom"><span id="ras3">ПРОБУЙ</span></div><br><br>
+<form id="red2">
+             <input id="LK4" value="Редактировать фото" type="button" onclick="location.href='{{ url_for('editor') }}'" />
+</form>
 <form>
     {% if  username != "" %}
-             <form>
-                 <span>{{username}}</span>
-                 <input id="LK2" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             <form id="inp">
+<nav>
+  <ul class="topmenu">
+    <li><a href="" class="down">{{username}}</a>
+      <ul class="submenu">
+        <li><a href="{{ url_for('profile') }}">Профиль</a></li>
+        <li><a href="{{ url_for('logout') }}">Выйти</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+				 <img id="userim" name = 'img10' src = '{{ url_for("static", filename=image) }}' height=20 width=20 />
              </form>
     {% else %}
-             <form>
-             <input value="Войти" type="button" onclick="location.href='{{ url_for('login') }}'" />
-             <input value="Регистрация" type="button" onclick="location.href='{{ url_for('registration') }}'" />
-                 <input id="LK" value="ЛК" type="button" onclick="location.href='{{ url_for('profile') }}'" />
+             <form id="reg">
+             <input class="inform" value="Войти" type="button" onclick="show('block', 'window1', '{{shown}}');"/>
+             <input class="inform" value="Регистрация" type="button" onclick="show('block', 'window2');" />
              </form>
     {% endif %}
 </form>
-<p><img id="MainPicture" src='{{ url_for("static", filename="Computer.png") }}' alt="Монитор">
-    <span id="private">{{commentary}}</span>
-    <br>
-    {% if login != "" %}
-    <span id="name">{{login}}</span>
-    {% endif %}
+
 </p>
+<span id="companyName">BrightF</span><span id="privateCom">Современный фоторедактор</span>
+<form id="red">
+             <input id="LK3" value="Редактировать фото" type="button" onclick="location.href='{{ url_for('editor2') }}'" />
+</form>
 {% endblock %}

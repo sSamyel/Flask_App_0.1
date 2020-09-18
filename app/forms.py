@@ -84,4 +84,37 @@ class SettingForm(FlaskForm):
 
 class FileForm(FlaskForm):
     file_object = FileField('file', validators=[FileRequired()])
+    submit = SubmitField('Редактировать')
+
+class EditorForm(FlaskForm):
+    file_object = FileField('file', validators=[FileRequired()])
     submit = SubmitField('Загрузить')
+
+class Editor2Form(FlaskForm):
+    file_object = FileField('file', validators=[FileRequired()])
+    submit = SubmitField('Загрузить')
+
+class GalleryForm(FlaskForm):
+    text = StringField('Текст')
+    submit = SubmitField('Удалить')
+
+class CutForm(FlaskForm):
+    x = StringField('x')
+    y = StringField('y')
+    x1 = StringField('x1')
+    y1 = StringField('y1')
+    x2 = StringField('x2')
+    y2 = StringField('y2')
+    submitCut = SubmitField('Обрезать')
+
+class RotateForm(FlaskForm):
+    submitRotate = SubmitField('Повернуть')
+
+class ResizeForm(FlaskForm):
+    submitResize = SubmitField('Преобразовать')
+
+class BrightForm(FlaskForm):
+    submitBright = SubmitField('Изменить')
+
+class ContrastForm(FlaskForm):
+    submitContrast = SubmitField('Изменить')
